@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="container py-5">
+        @if (Auth::check())
+        @include('components.navbar')
+        @endif
         @include('components.message')
         @yield('content')
     </div>
